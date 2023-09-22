@@ -45,13 +45,9 @@ class MainVC: UIViewController {
         changeButtonColor(button: mainView.todoButton, backgroundColor: .systemBlue, titleColor: .white)
         let todoVC = ToDoVC()
         
-        sendToDoList?.(ToDoList)
-        
-        }
         self.navigationItem.backButtonTitle = ""
         self.navigationController?.pushViewController(todoVC, animated: true)
     }
-    
     @objc func completeButtonTapped(_ button: UIButton){
         changeButtonColor(button: mainView.completeButton, backgroundColor: .systemCyan, titleColor: .white)
         let completeVC = CompleteVC()
@@ -67,16 +63,16 @@ class MainVC: UIViewController {
         
         self.navigationItem.backButtonTitle = ""
         self.navigationController?.pushViewController(tabBarController, animated: true)
-//        self.navigationController?.isNavigationBarHidden = true
+        //        self.navigationController?.isNavigationBarHidden = true
     }
     
     
-    //MARK: - 
+    //MARK: -
     private func changeButtonColor(button: UIButton, backgroundColor: UIColor, titleColor: UIColor) {
         button.backgroundColor = backgroundColor
         button.setTitleColor(titleColor, for: .normal)
     }
-    
 }
+
 
 
